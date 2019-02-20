@@ -1,22 +1,16 @@
-import json
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-class Person(object):
-    def __init__(self, first_name=None, last_name=None):
-        self.first_name = first_name
-        self.last_name = last_name
 
-    def name(self):
-        return("%s %s" %(self.first_name, self.last_name))
+class Model(object):
+    def __iter__(self):
+        raise NotImplementedError
 
-    @classmethod
-    def getAll(cls):
-        database  = open('db.txt', 'r')
-        result    = []
-        json_list = json.loads(database.read)
+    def get(self, item):
+        """Returns an object with a .items() call method
+        that iterates over key,value pairs of its information."""
+        raise NotImplementedError
 
-        for item in json_list:
-            item = json.loads(item)
-            person = Person(item['first_name'], item['last_name'])
-            result.append(person)
-        
-        return result
+    @property
+    def item_type(self):
+        raise NotImplementedError

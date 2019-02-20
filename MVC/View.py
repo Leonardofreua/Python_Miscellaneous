@@ -1,14 +1,15 @@
-from Model import Person
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-def showAllView(list):
-    print(len(list))
 
-    for item in list:
-        print(item.name())
+class View(object):
+    def show_item_list(self, item_type, item_list):
+        raise NotImplementedError
 
-def startView():
-    print('MVC - the simplest example')
-    print('Do yu want to see everyone in my db? [y/n]')
+    def show_item_information(self, item_type, item_name, item_info):
+        """Will look for item information by iterating over key,value pairs
+        yielded by item_info.items()"""
+        raise NotImplementedError
 
-def endView():
-    print('GoodBye!')
+    def item_not_found(self, item_type, item_name):
+        raise NotImplementedError
