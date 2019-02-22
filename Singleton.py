@@ -32,3 +32,8 @@ print(s)
 
 s = Singleton.getInstance()
 print(s)
+
+# ---- OUTPUT: ---- :
+#
+# <__main__.Singleton object at 0x030E0D90>
+# <__main__.Singleton object at 0x030E0D90>
