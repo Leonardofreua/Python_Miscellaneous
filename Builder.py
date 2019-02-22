@@ -61,3 +61,8 @@ if __name__ == "__main__":
 
     print(house)
     print(flat)
+
+# ---- OUTPUT: ---- :
+#
+# Floor: One | Size: Big
+# Floor: More than One | Size: Small

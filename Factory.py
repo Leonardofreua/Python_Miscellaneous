@@ -42,3 +42,9 @@ button_obj = ButtonFactory()
 button = ['image', 'input', 'flash']
 for b in button:
     print(button_obj.create_button(b).html)
+
+# ---- OUTPUT: ---- :
+#
+# <img> </img>
+# <input> </input>
+# <obj> </obj>
