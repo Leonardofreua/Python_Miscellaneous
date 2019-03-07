@@ -22,6 +22,8 @@ Define a Facade object that
 
 - implements a simple interface in terms of (by delegating to) the interfaces in the subsystem and
 - may perform additional functionality before/after forwarding a request.
+
+Reference: https://en.wikipedia.org/wiki/Facade_pattern
 """
 
 
