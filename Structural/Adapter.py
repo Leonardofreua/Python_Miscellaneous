@@ -26,3 +26,48 @@ Reference: https://en.wikipedia.org/wiki/Adapter_pattern
 """
 
 
+class EuropeanSocketInterface:
+
+    def voltage(self):
+        pass
+
+    def live(self):
+        pass
+
+    def neutral(self):
+        pass
+
+    def earth(self):
+        pass
+
+
+# Adapter
+class Socket(EuropeanSocketInterface):
+
+    def voltage(self):
+        return 230
+
+    def live(self):
+        return 1
+
+    def neutral(self):
+        return -1
+
+    def earth(self):
+        return 0
+
+
+# Target Interface
+class USASocketInterface:
+
+    def voltage(self):
+        pass
+
+    def live(self):
+        pass
+
+    def neutral(self):
+        pass
+
+#Adapter
+class Adapter(USASocketInterface):
