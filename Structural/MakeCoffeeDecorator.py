@@ -1,21 +1,21 @@
 #!/usr/bin/python
 # -*- coding : utf-8 -*-
 
-import CoffeeShop
+from Structural import CoffeeShopDecorator
 
-myCoffee = CoffeeShop.Concrete_Coffee()
+myCoffee = CoffeeShopDecorator.Concrete_Coffee()
 print('Ingredients: ' + myCoffee.get_ingredients() + '; Cost' + str(myCoffee.get_cost()) + '; sales tax = ' + str(
     myCoffee.get_tax()))
 
-myCoffee = CoffeeShop.Milk(myCoffee)
+myCoffee = CoffeeShopDecorator.Milk(myCoffee)
 print('Ingredients: ' + myCoffee.get_ingredients() + '; Cost' + str(myCoffee.get_cost()) + ', sales tax = ' + str(
     myCoffee.get_tax()))
 
-myCoffee = CoffeeShop.Vanilla(myCoffee)
+myCoffee = CoffeeShopDecorator.Vanilla(myCoffee)
 print('Ingredients: ' + myCoffee.get_ingredients() + '; Cost' + str(myCoffee.get_cost()) + ', sales tax = ' + str(
     myCoffee.get_tax()))
 
-myCoffee = CoffeeShop.Sugar(myCoffee)
+myCoffee = CoffeeShopDecorator.Sugar(myCoffee)
 print('Ingredients: ' + myCoffee.get_ingredients() + '; Cost' + str(myCoffee.get_cost()) + ', sales tax = ' + str(
     myCoffee.get_tax()))
 
