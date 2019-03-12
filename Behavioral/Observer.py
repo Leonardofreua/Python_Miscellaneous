@@ -31,7 +31,6 @@ Reference: https://en.wikipedia.org/wiki/Observer_pattern
 
 import threading
 import time
-import pdb
 
 
 class Downloader(threading.Thread):
