@@ -24,52 +24,49 @@ Define a separate Proxy object that
 Reference: https://en.wikipedia.org/wiki/Proxy_pattern
 """
 
-from abc import ABCMeta, abstractmethod
+
+class Image:
+
+    def __init__(self, fileName):
+        self._fileName = fileName
+
+    def load_image_from_disk(self):
+        print('loading ' + self._fileName)
+
+    def display_image(self):
+        print('display ' + self._fileName)
 
 
-NOT_IMPLEMENTED = "You should implement this."
+class Proxy:
+
+    def __init__(self, subject):
+        self._subject = subject
+        self._proxyState = None
 
 
-class AbstractCar:
-    __metaclass__ = ABCMeta
+class ProxyImage(Proxy):
 
-    @abstractmethod
-    def drive(self):
-        raise NotImplementedError(NOT_IMPLEMENTED)
+    def display_image(self):
+        if self._proxyState is None:
+            self._subject.load_image_from_disk()
+            self._proxyState = 1
 
-
-class Car(AbstractCar):
-    def drive(self):
-        print("Car has been driven!")
+        print("display " + self._subject._fileName)
 
 
-class Driver(object):
-    def __init__(self, age):
-        self.age = age
+proxy_image1 = ProxyImage(Image("HiRes_10MB_Photo"))
+proxy_image2 = ProxyImage(Image("Hello_5MB_Photo2"))
 
-
-class ProxyCar(AbstractCar):
-    def __init__(self, driver):
-        self.car = Car()
-        self.driver = driver
-
-    def drive(self):
-        if self.driver.age <= 16:
-            print("Sorry, the driver is too young to drive.")
-        else:
-            self.car.drive()
-
-
-if __name__ == '__main__':
-    driver = Driver(16)
-    car = ProxyCar(driver)
-    car.drive()
-
-    driver = Driver(25)
-    car = ProxyCar(driver)
-    car.drive()
+proxy_image1.display_image()
+proxy_image1.display_image()
+proxy_image2.display_image()
+proxy_image2.display_image()
 
 # ---- OUTPUT: ---- :
 #
-# Sorry, the driver is too young to drive.
-# Car has been driven!
+# loading HiRes_10MB_Photo
+# display HiRes_10MB_Photo
+# display HiRes_10MB_Photo
+# loading Hello_5MB_Photo2
+# display Hello_5MB_Photo2
+# display Hello_5MB_Photo2
