@@ -20,7 +20,7 @@ it couples the class to a particular receiver and makes it impossible to support
 - Define a chain of receiver objects having the responsibility, depending on run-time conditions, t
   o either handle a request or forward it to the next receiver on the chain (if any).
 
-Rereference: https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern
+Reference: https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern
 """
 
 
