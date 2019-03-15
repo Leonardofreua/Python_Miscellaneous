@@ -13,8 +13,8 @@ to specify which objects to create at run-time.
 
 *The Prototype design pattern describes how to solve such problems:
 
--Define a Prototype object that returns a copy of itself.
--Create new objects by copying a Prototype object.
+- Define a Prototype object that returns a copy of itself.
+- Create new objects by copying a Prototype object.
 
 Reference: https://en.wikipedia.org/wiki/Prototype_pattern
 """

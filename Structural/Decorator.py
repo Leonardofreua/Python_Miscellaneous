@@ -10,15 +10,15 @@ software, that is, objects that are easier to implement, change, test, and reuse
 
 - Responsibilities should be added to (and removed from) an object dynamically at run-time.
 - A flexible alternative to subclassing for extending functionality should be provided.
-When using subclassing, different subclasses extend a class in different ways. But an extension
-is bound to the class at compile-time and can't be changed at run-time.
+  When using subclassing, different subclasses extend a class in different ways. But an extension
+  is bound to the class at compile-time and can't be changed at run-time.
 
 *What solution does the Decorator design pattern describe?
 
 Define Decorator objects that
 
 - implement the interface of the extended (decorated) object (Component) transparently by forwarding
-all requests to it and
+  all requests to it and
 - perform additional functionality before/after forwarding a request.
 """
 

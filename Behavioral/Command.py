@@ -10,10 +10,10 @@ that is, objects that are easier to implement, change, test, and reuse.
 *What problems can the Command design pattern solve?
 
 - Coupling the invoker of a request to a particular request should be avoided. That is, hard-wired
-requests should be avoided.
+  requests should be avoided.
 - It should be possible to configure an object (that invokes a request) with a request.
-Implementing (hard-wiring) a request directly into a class is inflexible because it couples the class
-to a particular request at compile-time, which makes it impossible to specify a request at run-time.
+  Implementing (hard-wiring) a request directly into a class is inflexible because it couples the class
+  to a particular request at compile-time, which makes it impossible to specify a request at run-time.
 
 *What solution does the Command design pattern describe?
 

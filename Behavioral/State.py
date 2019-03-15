@@ -11,7 +11,7 @@ and reusable object-oriented software, such as objects that are easy to implemen
 
 - An object should change it's behavior when it's internal state changes.
 - State-specific behavior should be defined independently. That is, adding new states should not affect
-the behavior of existing states.
+  the behavior of existing states.
 
 *Implementing state-specific behavior directly within a class is inflexible because it commits the
  class to a particular behavior and makes it impossible to add a new state or change the behavior
@@ -19,10 +19,10 @@ the behavior of existing states.
  describes two solutions:
 
 - Define separate (state) objects that encapsulate state-specific behavior for each state.
-That is, define an interface (state) for performing state-specific behavior, and define classes that
-implement the interface for each state.
+  That is, define an interface (state) for performing state-specific behavior, and define classes that
+  implement the interface for each state.
 - A class delegates state-specific behavior to it's current state object instead of implementing
-state-specific behavior directly.
+  state-specific behavior directly.
 
 Reference: https://en.wikipedia.org/wiki/State_pattern
 """
