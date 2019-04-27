@@ -1,7 +1,7 @@
 Design Patterns: Python
 =======================
 
-A collection containing the catalog of Design Patterns, some Sorting Algorithms, Thread Life Cycle and other small Algorithms. Below you will see the lists with the protagonists of this collections. 
+A collection containing the catalog of Design Patterns, Thread Life Cycle and other small Algorithms. Below you will see the lists with the protagonists of this collections. 
 
 ## **Design Patterns**:
 
