@@ -24,76 +24,59 @@ software, that is, objects that are easierto implement, change, test, and reuse.
   the operation on the element ("visits the element").
 
 Reference: https://en.wikipedia.org/wiki/Visitor_pattern
+           https://github.com/Leonardofreua/python-patterns/blob/master/behavioral/visitor.py
 """
 
-class Expr(object):
 
-    def accept(self, visitor):
-        method_name = 'visit_{}'.format(self.__class__.__name__.lower())
-        visit = getattr(visitor, method_name)
-        return visit(self)
-
-
-class Int(Expr):
-
-    def __init__(self, value):
-        self.value = value
-
-
-class Add(Expr):
-
-    def __init__(self, left, right):
-        self.left = left
-        self.right = right
-
-
-class Mul(Expr):
-
-    def __init__(self, left, right):
-        self.left = left
-        self.right = right
-
-        
-class Visitor(object):
+class Node(object):
     pass
 
 
-class Eval(Visitor):
-
-    def visit_init(self, i):
-        return i.value
-
-    def visit_add(self, a):
-        return a.left.accept(self) + a.right.accept(self)
-
-    def visit_mul(self, a):
-        return a.left.accept(self) * a.right.accept(self)
+class A(Node):
+    pass
 
 
-class Print(Visitor):
+class B(Node):
+    pass
 
-    def visit_init(self, i):
-        return i.value
 
-    def visit_add(self, a):
-        return '{+{} {}}'.format(a.left.accept(self), a.right.accept(self))
+class C(A, B):
+    pass
 
-    def visit_mul(self, a):
-        return '{+{} {}}'.format(a.left.accept(self), a.right.accept(self))
+
+class Visitor(object):
+
+    def visit(self, node, *args, **kwargs):
+        meth = None
+        for cls in node.__class__.__mro__:
+            meth_name = 'visit_' + cls.__name__
+            meth = getattr(self, meth_name, None)
+            if meth:
+                break
+
+        if not meth:
+            meth = self.generic_visit
+        return meth(node, *args, **kwargs)
+
+    def generic_visit(self, node, *args, **kwargs):
+        print('generic_visit ' + node.__class__.__name__)
+
+    def visit_B(self, node, *args, **kwargs):
+        print('visit_B ' + node.__class__.__name__)
 
 
 def main():
-    expr = Add(
-            Add(Int(4), Int(3)), 
-            Mul(Int(10), Add(Int(1), Int(1)))
-        )
-    print(expr.accept(Print()))
-    print(expr.accept(Eval()))
+    a = A()
+    b = B()
+    c = C()
+    visitor = Visitor()
+    visitor.visit(a)
+    visitor.visit(b)
+    visitor.visit(c)
 
 
 if __name__ == "__main__":
     main()
 
-    
 # ---- OUTPUT: ---- :
 #
