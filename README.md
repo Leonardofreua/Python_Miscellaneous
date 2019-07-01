@@ -38,5 +38,6 @@ A collection containing the catalog of Design Patterns, Thread Life Cycle and ot
 | [Adapter](Structural/Adapter.py) | Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. The enterprise integration pattern equivalent is the translator.		|
 | [Decorator](Structural/Decorator.py) | Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to subclassing for extending functionality.		 |
 | [Facade](Structural/Facade.py) | Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.			 |
+| [Flyweight](Structural/Flyweight.py) | The intent of this pattern is to use sharing to support a large number of objects that have part of their internal state in common where the other part of state can vary.
 | [Proxy](Structural/Proxy.py) | Provide a surrogate or placeholder for another object to control access to it.			 |
 | [MVC](Structural/MVC/main.py) | MVC Pattern stands for [Model](Structural/MVC/Model.py)-[View](Structural/MVC/View.py)-[Controller](Structural/MVC/Controller.py) Pattern. This pattern is used to separate application's concerns.
