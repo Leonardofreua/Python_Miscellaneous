@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding : utf-8 -*-
 
-from Structural import CoffeeShopDecorator
+from Design_Patterns.Structural import CoffeeShopDecorator
 
 myCoffee = CoffeeShopDecorator.Concrete_Coffee()
 print('Ingredients: ' + myCoffee.get_ingredients() + '; Cost' + str(myCoffee.get_cost()) + '; sales tax = ' + str(

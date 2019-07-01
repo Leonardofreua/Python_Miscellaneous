@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from Behavioral.PublishSubscribe import PublishAndSubscribe
+from Design_Patterns.Behavioral.PublishSubscribe import PublishAndSubscribe
 
 pub = PublishAndSubscribe.Publisher()  # Initialized Publisher
 
