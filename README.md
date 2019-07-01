@@ -41,3 +41,12 @@ A collection containing the catalog of Design Patterns, Sort Algorithms, Thread 
 | [Flyweight](Design_Patterns/Structural/Flyweight.py) | The intent of this pattern is to use sharing to support a large number of objects that have part of their internal state in common where the other part of state can vary.		|
 | [Proxy](Design_Patterns/Structural/Proxy.py) | Provide a surrogate or placeholder for another object to control access to it.			 |
 | [MVC](Design_Patterns/Structural/MVC/main.py) | MVC Pattern stands for [Model](Design_Patterns/Structural/MVC/Model.py)-[View](Design_Patterns/Structural/MVC/View.py)-[Controller](Design_Patterns/Structural/MVC/Controller.py) Pattern. This pattern is used to separate application's concerns.
+
+
+## **Sorting**
+
+**Efficient**:
+
+| Pattern | Description |
+|:-------:| ----------- |
+| [QuickSort](Sorting/Efficient/QuickSort.py) | Quicksort is a divide and conquer algorithm which relies on a partition operation: to partition an array an element called a pivot is selected. |
