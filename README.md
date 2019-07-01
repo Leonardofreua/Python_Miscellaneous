@@ -23,7 +23,7 @@ A collection containing the catalog of Design Patterns, Thread Life Cycle and ot
 
 | Pattern | Description |
 |:-------:| ----------- |
-| [Abstract Factory](Creational/AbstractFactory.py) | Provide an interface for creating families of related or dependent objects without specifying their concrete classes.	|
+| [Abstract Factory](Creational/AbstractFactory.py) | Abstract Factory offers the interface for creating a family of related objects, without explicitly specifying their classes.	|
 | [Builder](Creational/Builder.py) | Separate the construction of a complex object from its representation, allowing the same construction process to create various representations.	 |
 | [Factory](Creational/Factory.py) | Define an interface for creating a single object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.		 |
 | [Prototype](Creational/Prototype.py) | Specify the kinds of objects to create using a prototypical instance, and create new objects from the 'skeleton' of an existing object, thus boosting performance and keeping memory footprints to a minimum.		 |
@@ -38,6 +38,6 @@ A collection containing the catalog of Design Patterns, Thread Life Cycle and ot
 | [Adapter](Structural/Adapter.py) | Convert the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces. The enterprise integration pattern equivalent is the translator.		|
 | [Decorator](Structural/Decorator.py) | Attach additional responsibilities to an object dynamically keeping the same interface. Decorators provide a flexible alternative to subclassing for extending functionality.		 |
 | [Facade](Structural/Facade.py) | Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.			 |
-| [Flyweight](Structural/Flyweight.py) | The intent of this pattern is to use sharing to support a large number of objects that have part of their internal state in common where the other part of state can vary.
+| [Flyweight](Structural/Flyweight.py) | The intent of this pattern is to use sharing to support a large number of objects that have part of their internal state in common where the other part of state can vary.		|
 | [Proxy](Structural/Proxy.py) | Provide a surrogate or placeholder for another object to control access to it.			 |
 | [MVC](Structural/MVC/main.py) | MVC Pattern stands for [Model](Structural/MVC/Model.py)-[View](Structural/MVC/View.py)-[Controller](Structural/MVC/Controller.py) Pattern. This pattern is used to separate application's concerns.
